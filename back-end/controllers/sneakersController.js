@@ -1,9 +1,8 @@
 const express = require("express");
 const sneakers = express.Router();
 
-
 sneakers.get("/", (req, res) => {
-    res.json({ status: "ok" })
+  res.json({ status: "ok" });
 });
 
 sneakers.get("/:id", async (req, res) => {
@@ -17,3 +16,4 @@ sneakers.get("/:id", async (req, res) => {
 })
 
 module.exports = sneakers;
+
