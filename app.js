@@ -1,5 +1,6 @@
 const cors = require("cors");
 const express = require("express");
+const sneakersController = require("./back-end/controllers/sneakersController.js");
 
 
 const app = express();
@@ -13,7 +14,6 @@ app.get("/", (req, res) => {
   res.send("Welcome to Sneakers App Sucka");
 });
 
-const sneakersController = require("./back-end/controllers/sneakersController.js");
 app.use("/sneakers", sneakersController);
 
 app.get("*", (req, res) => {
