@@ -7,6 +7,7 @@ const {
   updateSneaker,
   deleteSneaker,
 } = require("../queries/sneaker");
+const { checkBoolean, checkModel } = require("../../validations/checkSneakers.js");
 
 sneakers.get("/", async (req, res) => {
   const allSneakers = await getAllSneakers();
@@ -27,7 +28,7 @@ sneakers.get("/:id", async (req, res) => {
   }
 });
 
-sneakers.post("/", async (req, res) => {
+sneakers.post("/", checkBoolean, checkModel, async (req, res) => {
   const sneaker = await createSneaker(req.body);
   res.json(sneaker);
 });
