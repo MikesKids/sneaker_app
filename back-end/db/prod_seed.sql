@@ -1,4 +1,4 @@
-\c sneakers_db;
+\c sneakers_prod;
 
 INSERT INTO sneakers
     (brand, model, price, category, color, is_favorite)
