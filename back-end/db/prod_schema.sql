@@ -1,7 +1,8 @@
-DROP DATABASE IF EXISTS sneakers_prod;
-CREATE DATABASE sneakers_prod;
 
-\c sneakers_prod;
+DROP DATABASE IF EXISTS sneaker-app-prod;
+CREATE DATABASE sneaker-app-prod;
+
+\c sneaker-app-prod;
 
 CREATE TABLE sneakers (
     id SERIAL PRIMARY KEY,
