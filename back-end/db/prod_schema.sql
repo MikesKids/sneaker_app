@@ -1,3 +1,4 @@
+
 DROP DATABASE IF EXISTS sneaker-app-prod;
 CREATE DATABASE sneaker-app-prod;
 
