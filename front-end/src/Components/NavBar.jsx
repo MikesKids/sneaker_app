@@ -1,12 +1,23 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './NavBar.css';
 
-const Navbar = () => {
-    <nav>
-        <h1>M&M Sneaker App</h1>
-        <Link to="/">Home</Link>
-        <Link to="/create">Add Sneaker</Link>
-    </nav>
+const NavBar = () => {
+    return (
+        <header className='navbar'>
+            <nav>
+                <div className='navbar-links'>
+                    <Link to="/" className='navbar-link'>ℳ﹠ℳ SneakerWatch</Link>
+                    <Link to="/sneakers" className='navbar-link'>👟Sneakers👟</Link>
+                    <Link to="/sneakers/new" className='navbar-link'>Add Sneaker</Link>
+                </div>
+                <div className='navbar-right'>
+                    <Link to="/profile" className='navbar-link'>Profile</Link>
+                    <Link to="/search" className='navbar-link'>Search</Link>
+                </div>
+            </nav>
+        </header>
+    );
 };
 
-export default Navbar;
+export default NavBar;
