@@ -4,6 +4,7 @@ import './App.css'
 import NavBar from './Components/NavBar';
 
 import Home from './Pages/Home';
+import Index from './Pages/Index';
 
 function App() { 
 
@@ -16,7 +17,7 @@ function App() {
         <main>
           <Routes>
             <Route path='/' element={<Home/>} />
-            <Route/>
+            <Route path='/sneakers' element={<Index/>} />
             <Route/>
             <Route/>
             <Route/>
