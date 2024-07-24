@@ -15,7 +15,8 @@ const SneakerForm = () => {
     let navigate = useNavigate();
 
     const handleChange = (event) => {
-        setNewSneaker({...newSneaker, [event.target.id]: event.target.value})
+        const {id, value, type, checked} = event.target;
+         setNewSneaker({...newSneaker, [id]: type === 'checkbox' ? checked : value});
     }
 
     const addSneaker = () => {
@@ -59,8 +60,8 @@ const SneakerForm = () => {
                     <input id="color" type="text" value={newSneaker.color} onChange={handleChange} />
                 </div>
                 <div className="form-group">
-                    <input type="checkbox" id="favorite" name="is_favorite" value={newSneaker.is_favorite} onChange={handleChange} />
-                    <label htmlFor="favorite">Check if Favorite</label>
+                    <input type="checkbox" checked={newSneaker.is_favorite} id="is_favorite" name="is_favorite" onChange={handleChange} />
+                    <label htmlFor="is_favorite">Check if Favorite</label>
                 </div>
                 <button>Create New Sneaker</button>
             </form>
