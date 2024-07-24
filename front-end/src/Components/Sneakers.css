@@ -8,3 +8,11 @@ body, html {
   .sneakers-container {
     text-align: center;
   }
+
+  a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+
+  

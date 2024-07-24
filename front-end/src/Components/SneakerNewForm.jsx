@@ -19,9 +19,9 @@ const SneakerForm = () => {
     }
 
     const addSneaker = () => {
-        fetch(`${API}/sneakers/new`, {
+        fetch(`${API}/sneakers`, {
             method: 'POST',
-            body: JSON.stringify(transaction),
+            body: JSON.stringify(newSneaker),
             headers: {"Content-Type": "application/json"}
         })
         .then(() => {

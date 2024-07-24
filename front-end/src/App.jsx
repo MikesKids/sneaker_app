@@ -5,6 +5,7 @@ import NavBar from './Components/NavBar';
 
 import Home from './Pages/Home';
 import Index from './Pages/Index';
+import New from './Pages/New';
 
 function App() { 
 
@@ -18,7 +19,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/sneakers' element={<Index/>} />
-            <Route/>
+            <Route path='/sneakers/new' element={<New/>} />
             <Route/>
             <Route/>
             <Route/>
