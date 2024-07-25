@@ -14,5 +14,11 @@ body, html {
     transition: width .3s;
 }
 
+.sneaker-head {
+  color: gold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: xx-large;
+}
+
 
   

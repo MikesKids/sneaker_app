@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
+import './SneakerNewForm.css';
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -63,7 +64,7 @@ const SneakerForm = () => {
                     <input type="checkbox" checked={newSneaker.is_favorite} id="is_favorite" name="is_favorite" onChange={handleChange} />
                     <label htmlFor="is_favorite">Check if Favorite</label>
                 </div>
-                <button>Create New Sneaker</button>
+                <button className="create-button">Create New Sneaker</button>
             </form>
         </div>
     )
