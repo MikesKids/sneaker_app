@@ -1,18 +1,19 @@
 import React, { useEffect } from "react";
-import { useState, useState } from "react";
+import { useState } from "react";
 import {Link, useParams, useNavigate } from "react-router-dom";
+import'./SneakerDetails.css';
 
 
 const API = import.meta.env.VITE_API_URL;
 
 const SneakerDetails = () => {
-    const [sneakers, setSneakers] = useState({
+    const [sneaker, setSneakers] = useState({
         brand: '',
         model: '',
         price: 0,
         category: '',
         color: '',
-        is_favorite: falseå
+        is_favorite: false
     })
     let { id } = useParams();
     let navigate = useNavigate();
@@ -24,7 +25,7 @@ const SneakerDetails = () => {
         })
         .then(resJSON => {
             console.log(resJSON)
-            setSneaker(resJSON)
+            setSneakers(resJSON)
         })
         .catch(() => {
           navigate("/notfound");
@@ -45,9 +46,9 @@ const SneakerDetails = () => {
         <div className="sneaker-details">
       <h1>Sneakers Details</h1>
       <p>{sneaker.brand}</p>
-      <p>${sneaker.model}</p>
+      <p>{sneaker.model}</p>
       <p>{sneaker.price}</p>
-      <p>{sneaker.catergory}</p>
+      <p>{sneaker.category}</p>
       <p>{sneaker.color}</p>
       <p>{sneaker.is_favorite}</p>
       <Link to={`/sneakers/${id}/edit`}>
