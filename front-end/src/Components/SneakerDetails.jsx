@@ -7,7 +7,7 @@ import'./SneakerDetails.css';
 const API = import.meta.env.VITE_API_URL;
 
 const SneakerDetails = () => {
-    const [sneaker, setSneakers] = useState({
+    const [sneaker, setSneaker] = useState({
         brand: '',
         model: '',
         price: 0,
@@ -25,7 +25,7 @@ const SneakerDetails = () => {
         })
         .then(resJSON => {
             console.log(resJSON)
-            setSneakers(resJSON)
+            setSneaker(resJSON)
         })
         .catch(() => {
           navigate("/notfound");
@@ -45,12 +45,12 @@ const SneakerDetails = () => {
     return (
         <div className="sneaker-details">
       <h1>Sneakers Details</h1>
-      <p>{sneaker.brand}</p>
-      <p>{sneaker.model}</p>
-      <p>{sneaker.price}</p>
-      <p>{sneaker.category}</p>
-      <p>{sneaker.color}</p>
-      <p>{sneaker.is_favorite}</p>
+      <p> <b>Brand:</b> {sneaker.brand}</p>
+      <p> <b>Model:</b>{sneaker.model}</p>
+      <p> <b>Price:</b>{sneaker.price}</p>
+      <p> <b>Category:</b>{sneaker.category}</p>
+      <p> <b>Color:</b>{sneaker.color}</p>
+      <p> <b>Favorite:</b>{sneaker.is_favorite}</p>
       <Link to={`/sneakers/${id}/edit`}>
         <button className="edit-button">Edit</button>
       </Link>

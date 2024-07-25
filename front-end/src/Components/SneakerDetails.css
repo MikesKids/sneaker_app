@@ -8,16 +8,16 @@
   width: 100%;
 }
 
-.sneakers-details h1 {
+h1 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #333;
+  color:crimson;
 }
 
-.sneakers-details p {
+p {
   margin: 10px 0;
   font-size: 18px;
-  color: #ece0e0;
+  color: gold;
 }
 
 .edit-button, .delete-button {
@@ -30,12 +30,12 @@
 }
 
 .edit-button {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #e0ca24;
+  color: rgb(134, 10, 10);
   margin-right: 10px;
 }
 
 .delete-button {
-  background-color: #f44336;
+  background-color: #6b5757;
   color: white;
 }
