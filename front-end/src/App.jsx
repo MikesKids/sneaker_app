@@ -6,6 +6,8 @@ import NavBar from './Components/NavBar';
 import Home from './Pages/Home';
 import Index from './Pages/Index';
 import New from './Pages/New';
+import Edit from './Pages/Edit';
+import Show from './Pages/Show';
 
 function App() { 
 
@@ -20,8 +22,8 @@ function App() {
             <Route path='/' element={<Home/>} />
             <Route path='/sneakers' element={<Index/>} />
             <Route path='/sneakers/new' element={<New/>} />
-            <Route/>
-            <Route/>
+            <Route path='/sneakers/:id/edit' element={<Edit/>} />
+            <Route path='.sneakers/id' element={<Show/>} />
             <Route/>
           </Routes>
         </main>
