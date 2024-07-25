@@ -1,18 +1,19 @@
 import React, { useEffect } from "react";
-import { useState, useState } from "react";
+import { useState } from "react";
 import {Link, useParams, useNavigate } from "react-router-dom";
+import'./SneakerDetails.css';
 
 
 const API = import.meta.env.VITE_API_URL;
 
 const SneakerDetails = () => {
-    const [sneakers, setSneakers] = useState({
+    const [sneaker, setSneaker] = useState({
         brand: '',
         model: '',
         price: 0,
         category: '',
         color: '',
-        is_favorite: falseå
+        is_favorite: false
     })
     let { id } = useParams();
     let navigate = useNavigate();
@@ -44,12 +45,12 @@ const SneakerDetails = () => {
     return (
         <div className="sneaker-details">
       <h1>Sneakers Details</h1>
-      <p>{sneaker.brand}</p>
-      <p>${sneaker.model}</p>
-      <p>{sneaker.price}</p>
-      <p>{sneaker.catergory}</p>
-      <p>{sneaker.color}</p>
-      <p>{sneaker.is_favorite}</p>
+      <p> <b>Brand:</b> {sneaker.brand}</p>
+      <p> <b>Model:</b>{sneaker.model}</p>
+      <p> <b>Price:</b>{sneaker.price}</p>
+      <p> <b>Category:</b>{sneaker.category}</p>
+      <p> <b>Color:</b>{sneaker.color}</p>
+      <p> <b>Favorite:</b>{sneaker.is_favorite}</p>
       <Link to={`/sneakers/${id}/edit`}>
         <button className="edit-button">Edit</button>
       </Link>
