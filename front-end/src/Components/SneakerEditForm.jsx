@@ -6,13 +6,25 @@ const API = import.meta.env.VITE_API_URL;
 const EditSneakerForm = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [form, setForm] = useState(null);
+  const [form, setForm] = useState({
+    brand: '',
+    model: '',
+    price: 0,
+    category: '',
+    color: '',
+    is_favorite: false,
+  });
 
   useEffect(() => {
-    fetch(`/${API}/sneakers/${id}`)
-      .then(response => response.json())
-      .then(data => setForm(data))
-      .catch(error => console.error(error));
+    fetch(`${API}/sneakers/${id}`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => setForm(data))
+    .catch(error => console.error('Error fetching sneaker:', error));
   }, [id]);
 
   const handleChange = (event) => {
@@ -25,18 +37,24 @@ const EditSneakerForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch(`/${API}/sneakers/${id}`, {
+    fetch(`${API}/sneakers/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form),
     })
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+            throw new Error('Network  response was not ok');
+        } 
+        return response.json();
+      })
       .then(data => navigate(`/sneaker/${data.id}`))
-      .catch(error => console.error(error));
+      .catch(error => console.error('Error updating sneaker:', error));
   };
 
-  if (!form) return <div>Loading...</div>;
-
+//   if (!form) {
+//     return <div>Loading...</div>;
+//   }
   return (
     <div>
       <h2>Edit Sneaker</h2>
