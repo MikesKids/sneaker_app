@@ -9,6 +9,7 @@ import New from './Pages/New';
 import Edit from './Pages/Edit';
 import Show from './Pages/Show';
 import FourOFour from './Pages/FourOFour';
+import Search from './Pages/SearchPage';
 
 function App() { 
 
@@ -25,6 +26,7 @@ function App() {
             <Route path='/sneakers/new' element={<New/>} />
             <Route path='/sneakers/:id/edit' element={<Edit/>} />
             <Route path='/sneakers/:id' element={<Show/>} />
+            <Route path='/search' element={<Search/>} />
             <Route path='*' element={ <FourOFour/>} />
           </Routes>
         </main>
