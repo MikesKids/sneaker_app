@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "db:init": "psql -U postgres -f back-end/db/schema.sql",
-    "db:seed": "psql -U postgres -f back-end/db/seed.sql"
+    "db:seed": "psql -U postgres -f back-end/db/seed.sql",
+    "db:everything": "psql -U postgres -f back-end/db/prod_schema.sql && psql -U postgres -f back-end/db/prod_seed.sql" 
   },
   "keywords": [],
   "author": "",
