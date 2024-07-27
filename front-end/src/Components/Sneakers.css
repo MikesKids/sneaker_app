@@ -1,4 +1,4 @@
-body, html {
+/* body, html {
     margin: 0;
     height: 100%;
     justify-content: center;
@@ -7,18 +7,52 @@ body, html {
   
   .sneakers-container {
     text-align: center;
+
   }
 
   a:hover::after {
     width: 100%;
     transition: width .3s;
 }
+.sneakers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+}
 
 .sneaker-head {
-  color: gold;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: xx-large;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sneaker-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 
+
+   */
+
+   .sneakers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .sneaker-head {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sneaker-link {
+    text-decoration: none;
+    color: inherit;
+  }
   

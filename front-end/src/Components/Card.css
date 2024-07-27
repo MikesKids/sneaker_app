@@ -1,0 +1,12 @@
+.card {
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    box-shadow: 0 10px 8px #999;
+    padding: 16px;
+    margin: 16px;
+    background-color: #fff;
+    transition: transform 0.2s;
+  }
+  
+
+  

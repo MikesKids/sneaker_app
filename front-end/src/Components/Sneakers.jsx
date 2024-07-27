@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Sneaker from "./Sneaker";
 import "./Sneakers.css";
+import"./Card.css";
+import Card from "./Card";
 
 
 const API = import.meta.env.VITE_API_URL
@@ -23,11 +25,13 @@ const Sneakers = () => {
     return (
         <div className="sneakers-container">
           <h2 className="sneaker-head">Sneakers</h2>
-          {sneakers.map(sneaker => {
-            return <Sneaker key={sneaker.id} sneaker={sneaker} />
-    })}
+          {sneakers.map((sneaker) => (
+            <Card key={sneaker.id}>
+              <Sneaker className="sneaker-link" sneaker={sneaker} />
+            </Card>
+          ))}
         </div>
-      )
-}
+      );
+    };
 
 export default Sneakers;
