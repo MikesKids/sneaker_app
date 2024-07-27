@@ -50,7 +50,7 @@ const SneakerDetails = () => {
       <p> <b>Price:</b>{sneaker.price}</p>
       <p> <b>Category:</b>{sneaker.category}</p>
       <p> <b>Color:</b>{sneaker.color}</p>
-      <p> <b>Favorite:</b>{sneaker.is_favorite}</p>
+      <p> <b>Favorite:</b>{sneaker.is_favorite ? "Yes": "No"}</p>
       <Link to={`/sneakers/${id}/edit`}>
         <button className="edit-button">Edit</button>
       </Link>
