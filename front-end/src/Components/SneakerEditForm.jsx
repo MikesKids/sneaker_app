@@ -48,7 +48,7 @@ const EditSneakerForm = () => {
         } 
         return response.json();
       })
-      .then(data => navigate(`/sneaker/${data.id}`))
+      .then(data => navigate(`/sneakers/${data.id}`))
       .catch(error => console.error('Error updating sneaker:', error));
   };
 
