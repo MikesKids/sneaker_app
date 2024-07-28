@@ -10,6 +10,7 @@ import Edit from './Pages/Edit';
 import Show from './Pages/Show';
 import FourOFour from './Pages/FourOFour';
 import Search from './Pages/SearchPage';
+import Profile from './Components/Profile';
 
 function App() { 
 
@@ -29,6 +30,7 @@ function App() {
             <Route path='/sneakers/:id/edit' element={<Edit/>} />
             <Route path='/sneakers/:id' element={<Show/>} />
             <Route path='/search' element={<Search/>} />
+            <Route path='/profile' element={<Profile/>} />
             <Route path='*' element={ <FourOFour/>} />
           </Routes>
         </main>
