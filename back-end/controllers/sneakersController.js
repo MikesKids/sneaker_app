@@ -7,7 +7,10 @@ const {
   updateSneaker,
   deleteSneaker,
 } = require("../queries/sneaker");
-const { checkBoolean, checkModel } = require("../../validations/checkSneakers.js");
+const {
+  checkBoolean,
+  checkModel,
+} = require("../../validations/checkSneakers.js");
 
 sneakers.get("/", async (req, res) => {
   const allSneakers = await getAllSneakers();
@@ -45,6 +48,7 @@ sneakers.put("/:id", async (req, res) => {
 
 sneakers.delete("/:id", async (req, res) => {
   const { id } = req.params;
+  console.log(req.params);
   const deletedSneaker = await deleteSneaker(id);
   if (deletedSneaker.id) {
     res.status(200).json(deletedSneaker);

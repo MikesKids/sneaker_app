@@ -45,6 +45,7 @@ const SneakerDetails = () => {
     return (
         <div className="sneaker-details">
       <h1>Sneakers Details</h1>
+      <img src="../assets"></img>
       <p> <b>Brand:</b> {sneaker.brand}</p>
       <p> <b>Model:</b>{sneaker.model}</p>
       <p> <b>Price:</b>{sneaker.price}</p>
