@@ -15,7 +15,7 @@ const SearchBar = () => {
 
   const filteredSneakers = sneakers.filter(sneaker =>
     sneaker.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    sneaker.model.toLowerCase().includes(searchQuery.toLowerCase())
+    sneaker.model.toLowerCase().includes(searchQuery.toLowerCase()) || sneaker.category.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
