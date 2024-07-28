@@ -22,11 +22,21 @@ const Sneakers = () => {
         .catch((error) => console.error(error))
     }, [])
 
+    const logos = {
+      Nike: './assets/nike_logo.png',
+      'Under Armour': './assets/under_armor.png',
+      Adidas: './assets/adidas_logo.png',
+      'New Balance': './assets/new_balance.png',
+      Puma: './assets/puma.png',
+      Reebok: './assets/reebok.png',
+      Other: './assets/logo.png',
+    }
+
     return (
         <div className="sneakers-container">
           <h2 className="sneaker-head">Sneakers</h2>
           {sneakers.map((sneaker) => (
-            <Card key={sneaker.id}>
+            <Card key={sneaker.id} image={logos[sneaker.brand] || logos.Other}>
               <Sneaker className="sneaker-link" sneaker={sneaker} />
             </Card>
           ))}
